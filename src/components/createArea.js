@@ -36,8 +36,8 @@ function CreateArea(props){
             {isExpanded && (
                 <input 
                 name="title"
-                onChange={handleChange}
-                value={note.content}
+                onChange={(e)=>handleChange(e)}
+                //  defaultValue={note.content}
                 placeholder="title"
                 />            
                 )}
@@ -46,13 +46,14 @@ function CreateArea(props){
             name="content"
             onClick={expand}
             // onClick={handleChange}
-            value={note.content}
+            // defaultValue={note.content}
+            onChange={(e)=>handleChange(e)}
             placeholder="What would you like to do?"
             rows={isExpanded ? 3 : 1}
             />
             <Zoom in={isExpanded}>
         {/* Use of a Floating action button (Fab) */}
-        <Fab onClick={submitNote}>
+        <Fab onClick={(e)=>submitNote(e)}>
             <AddIcon />
         </Fab>
         </Zoom>

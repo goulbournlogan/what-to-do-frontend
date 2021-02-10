@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Header from "./Header";
 import Footer from './Footer';
 import Note from "./Note";
-import CreateArea from "./createArea";
+import CreateArea from "./CreateArea";
 
 //this is a function for the creation of new notes
 function App() {

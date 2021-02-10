@@ -11,11 +11,13 @@ function CreateArea(props){
     });
     
     function handleChange(e){
+
         const {name, value} = e.target;
         setNote (previousNote => {
             return {
                 ...previousNote, [name]:value 
-            };
+          };
+        
         });
     }
     function submitNote(e) {
@@ -37,7 +39,7 @@ function CreateArea(props){
                 <input 
                 name="title"
                 onChange={(e)=>handleChange(e)}
-                //  defaultValue={note.content}
+                Value={note.content}
                 placeholder="title"
                 />            
                 )}
@@ -46,7 +48,7 @@ function CreateArea(props){
             name="content"
             onClick={expand}
             // onClick={handleChange}
-            // defaultValue={note.content}
+            Value={note.content}
             onChange={(e)=>handleChange(e)}
             placeholder="What would you like to do?"
             rows={isExpanded ? 3 : 1}

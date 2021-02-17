@@ -7,6 +7,10 @@ import CreateArea from "./createArea";
 //this is a function for the creation of new notes
 function App() {
     const [notes, setNotes] = useState([]);
+    // const [isAuth, setIsAuth] = useState(false); //would be used for making login button appear/disapear
+    const [user, setUser] = useState({});
+
+
     function addNote(newNote){
         setNotes(previousNotes => {
             return [...previousNotes, newNote
